@@ -46,17 +46,13 @@ const clientSchema = new mongoose.Schema({
   },
 
   address: {
-    street: {
-      type: String,
-      required: [true, "Please provide your street address"],
-    },
-    city: {
-      type: String,
-      required: [true, "Please provide your city"],
-    },
-    state: {
+    wilaya: {
       type: String,
       required: [true, "Please provide your state"],
+    },
+    province: {
+      type: String,
+      required: [true, "Please provide your province"],
     },
   },
 
@@ -66,6 +62,6 @@ const clientSchema = new mongoose.Schema({
   },
 });
 
-const Client = mongoose.model("User", clientSchema);
+const Client = mongoose.model("Client", clientSchema);
 
 module.exports = { Client, clientSchema };
