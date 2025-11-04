@@ -13,6 +13,7 @@ const cors = require("cors");
 // Import local modules
 const connectDB = require("./utils/connectDB");
 const authRoutes = require("./routes/auth");
+const carRoutes = require("./routes/carRoutes");
 
 // Initialize Express application
 const app = express();
@@ -23,6 +24,7 @@ app.use(cors()); // Enable Cross-Origin Resource Sharing
 
 // API Routes
 app.use("/api/auth", authRoutes);
+app.use("/api/car", carRoutes);
 
 // Default route for API health check
 app.get("/", (req, res) => {

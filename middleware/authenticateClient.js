@@ -1,3 +1,7 @@
+const jwt = require("jsonwebtoken");
+const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_EXPIRE = process.env.JWT_EXPIRE;
+
 const authenticateClient = async (req, res, next) => {
   const authHeader = req.headers.authorization;
 

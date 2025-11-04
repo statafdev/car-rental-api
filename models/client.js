@@ -55,13 +55,10 @@ const clientSchema = new mongoose.Schema({
       required: [true, "Please provide your province"],
     },
   },
-
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-const Client = mongoose.model("Client", clientSchema);
-
-module.exports = { Client, clientSchema };
+module.exports = mongoose.model("Client", clientSchema);
